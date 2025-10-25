@@ -21,6 +21,7 @@ import LogoSamplePlugin from './plugins/plugin-logo-sample';
 import SimulatorLocalePlugin from './plugins/plugin-simulator-locale';
 import lowcodePlugin from './plugins/plugin-lowcode-component';
 import appHelper from './appHelper';
+import { mountChatbotWidget } from './components/ChatbotWidget';
 import './global.scss';
 
 async function registerPlugins() {
@@ -115,4 +116,6 @@ async function registerPlugins() {
     appHelper,
     enableContextMenu: true,
   });
+
+  mountChatbotWidget();
 })();
